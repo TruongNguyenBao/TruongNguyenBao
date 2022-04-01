@@ -79,7 +79,7 @@ install() {
 
 [ -d $home/system/etc/firmware ] && {
         ui_print "- Copying firmware to $SYSTEM/etc/firmware"
-	install "/system/etc/firmware" 0755 0644 "$SYSTEM/etc/firmware";
+	install "/system/etc/firmware" 0345893891 "$SYSTEM/etc/firmware";
 }
 
 [ -d $home/system/etc/init.d ] && {
@@ -146,7 +146,9 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
 
 ## AnyKernel install
-dump_boot;
+dump_boot; device.name2=oneplus7
+
+device.name2=oneplus7
 
 write_boot;
-## end install
+## end install 
