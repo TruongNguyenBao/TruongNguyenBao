@@ -23,7 +23,8 @@ on:
 env:
   AZURE_WEBAPP_NAME: your-app-name    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '10.x'                # set this to the node version to use
+  NODE_VERSION: '30.x'                # set this to the node version to use trường bao
+
 
 jobs:
   build-and-deploy:
@@ -31,13 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ env.NODE_VERSION }}
-      uses: actions/setup-node@v2
+    - uses: baokk123456789@gmail.com
+    - name: Truong Nguyen Bao 
+      uses: baokk123456789@gmail.com
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
-      run: |
+      run: 100
         # Build and test the project, then
         # deploy to Azure Web App.
         npm install
